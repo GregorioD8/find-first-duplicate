@@ -1,12 +1,24 @@
 def find_first_duplicate(arr):
+     """
+    Finds the first duplicate value in an array.
     
+    Parameters:
+    arr (list): The list of integers to check for duplicates.
+    
+    Returns:
+    int: The first duplicate value if it exists, otherwise -1.
+    """
+    #  Iterate through each number in the array
     unique_nums = set()
-
+     
     for num in arr:
+        # Check if the number is already in the set
         if num in unique_nums:
-            return num
-        unique_nums.add(num)
-
+            return num # First duplicate found
+        # Add the number to the set if not seen before
+        unique_nums.add(num) 
+        
+    # No duplicates found return -1
     return -1
 
 print("Expecting: 3")
